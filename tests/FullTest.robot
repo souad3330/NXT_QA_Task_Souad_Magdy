@@ -20,7 +20,7 @@ Create Event And Add User With Trip
     Go To Attendees
     GO To All Visitors
     Add User
-    Fill User Details    Nxt12346    taadqqmmgyr    gmmqquptuyk    tkgmmdg@test11w.com
+    Fill User Details    Nxt12346    will    smith    test1@test1.com
     Go To Trip Info
     Add Trip
     Set Flight Status    Approved

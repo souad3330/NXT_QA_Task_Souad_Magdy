@@ -24,7 +24,7 @@ ${email_locator}  id=email
 ${create_user_button_locator}   xpath=//*[@id="root"]/div[1]/div[5]/main/div[2]/div/form/section/div[2]/div/div/div/div[2]/button
 ${login_btn_locator}   xpath=//*[@id="root"]/div[1]/div[5]/main/div/div/form/div/div[2]/button
 ${add_trip_btn_locator}  xpath=//*[@id="root"]/div[1]/div[5]/main/div[2]/div/section/div[1]/div/h2    Add Trip
-
+${set_status_trip_locator}   id=status_trip
 
 *** Keywords ***
 ##Open Browser And Maximize
@@ -101,7 +101,7 @@ Add Trip
 
 Set Flight Status
     [Arguments]    ${status}
-    Select From List By Value    id=status_trip    ${status}
+    Select From List By Value    ${set_status_trip_locator}    ${status}
 
 Close Browser
     Close Browser
