@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-08-29T14:48:13.467653" rpa="false" schemaversion="5">
+<suite id="s1" name="FullTest" source="C:\Users\Administrator\PycharmProjects\NXT_QA_Task\tests\FullTest.robot">
+<test id="s1-t1" name="Create Event And Add User With Trip" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-08-29T14:48:13.764528" level="INFO">Opening browser 'Chrome' to base url 'https://qa-test-frontend-ce07bae316f3.herokuapp.com/'.</msg>
+<arg>https://qa-test-frontend-ce07bae316f3.herokuapp.com/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-29T14:48:13.764528" elapsed="3.502242"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-29T14:48:17.266770" elapsed="0.033014"/>
+</kw>
+<kw name="Login" owner="BrowserLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-29T14:48:17.301781" elapsed="0.227186"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-29T14:48:17.528967" level="INFO">Typing text 'nxttester' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T14:48:17.528967" elapsed="0.152082"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-29T14:48:17.681049" level="INFO">Typing text 'nxt#qA@23' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T14:48:17.681049" elapsed="0.110910"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-29T14:48:17.792763" level="INFO">Clicking button 'xpath=//*[@id="root"]/div[1]/div[5]/main/div/div/form/div/div[2]/button'.</msg>
+<arg>${login_btn_locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T14:48:17.792763" elapsed="0.162516"/>
+</kw>
+<arg>nxttester</arg>
+<arg>nxt#qA@23</arg>
+<status status="PASS" start="2024-08-29T14:48:17.300783" elapsed="0.654496"/>
+</kw>
+<kw name="Skip" owner="BrowserLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Skip}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-29T14:48:17.958632" elapsed="1.129631"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-29T14:48:19.089290" level="INFO">Clicking button 'xpath=/html/body/div/div[1]/div[5]/main/div/div/form/div/div[3]/button'.</msg>
+<arg>${Skip}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T14:48:19.089290" elapsed="0.142925"/>
+</kw>
+<arg>${Skip}</arg>
+<status status="PASS" start="2024-08-29T14:48:17.958632" elapsed="1.273583"/>
+</kw>
+<kw name="Create Event" owner="BrowserLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${create_event_button}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-29T14:48:19.233214" elapsed="1.288624"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-29T14:48:20.522838" level="INFO">Clicking element 'xpath=//*[@id="root"]/div[1]/div[5]/main/div/section/div[2]/a/div/p'.</msg>
+<arg>${create_event_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T14:48:20.521838" elapsed="0.060342"/>
+</kw>
+<kw name="Wait For Element To Contain" owner="BrowserLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-29T14:48:20.583176" elapsed="0.225205"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2024-08-29T14:48:20.809381" elapsed="0.016350"/>
+</kw>
+<arg>${dashboard_title}</arg>
+<arg>New Event</arg>
+<status status="PASS" start="2024-08-29T14:48:20.582180" elapsed="0.243551"/>
+</kw>
+<status status="PASS" start="2024-08-29T14:48:19.233214" elapsed="1.592517"/>
+</kw>
+<kw name="Setup Later" owner="BrowserLibrary">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-29T14:48:20.825731" level="INFO">Clicking element 'xpath=//*[@id="root"]/div[1]/div[5]/main/div/div[2]/div[3]/div/div/div'.</msg>
+<arg>${setup_later_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T14:48:20.825731" elapsed="0.060321"/>
+</kw>
+<status status="PASS" start="2024-08-29T14:48:20.825731" elapsed="0.060321"/>
+</kw>
+<kw name="Go To Registration" owner="BrowserLibrary">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${registration_menu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-29T14:48:20.886425" elapsed="1.403568"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-29T14:48:22.289993" level="INFO">Clicking element 'xpath=//*[@id="root"]/div[1]/div[5]/main/div[1]/aside/div/main/div[4]/div[1]/div/div[1]/span'.</msg>
+<arg>${registration_menu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T14:48:22.289993" elapsed="0.046874"/>
+</kw>
+<status status="PASS" start="2024-08-29T14:48:20.886425" elapsed="1.450442"/>
+</kw>
+<kw name="Go To Attendees" owner="BrowserLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${attendees_menu}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-29T14:48:22.352489" elapsed="0.022236"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-29T14:48:22.374725" level="INFO">Clicking element 'xpath=//*[@id="root"]/div[1]/div[5]/main/div[1]/aside/div/main/div[4]/div[2]/div/ul/li[1]/a'.</msg>
+<arg>${attendees_menu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T14:48:22.374725" elapsed="0.100701"/>
+</kw>
+<status status="PASS" start="2024-08-29T14:48:22.336867" elapsed="0.138559"/>
+</kw>
+<kw name="GO To All Visitors" owner="BrowserLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${all_visitors_tab}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-29T14:48:22.476427" elapsed="1.349114"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-29T14:48:23.825541" level="INFO">Clicking element 'xpath=//*[@id="root"]/div[1]/div[5]/main/div[2]/div/div[1]/div[2]'.</msg>
+<arg>${all_visitors_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T14:48:23.825541" elapsed="0.138414"/>
+</kw>
+<status status="PASS" start="2024-08-29T14:48:22.476427" elapsed="1.487528"/>
+</kw>
+<kw name="Add User" owner="BrowserLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${add_user_button}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-29T14:48:23.963955" elapsed="0.013941"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-29T14:48:23.977896" level="INFO">Clicking element 'xpath=//*[@id="root"]/div[1]/div[5]/main/div[2]/div/section/div[2]/div/div[6]/a/div/span'.</msg>
+<arg>${add_user_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T14:48:23.977896" elapsed="0.083839"/>
+</kw>
+<status status="PASS" start="2024-08-29T14:48:23.963955" elapsed="0.097780"/>
+</kw>
+<kw name="Fill User Details" owner="BrowserLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${firstname_locator}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-29T14:48:24.062734" elapsed="0.736919"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-29T14:48:24.800653" level="INFO">Typing text 'Nxt12346' into text field 'id=password'.</msg>
+<arg>${password_locator}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T14:48:24.800653" elapsed="0.444473"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-29T14:48:25.245126" level="INFO">Typing text 'taadqqmmgyr' into text field 'id=firstName'.</msg>
+<arg>${firstname_locator}</arg>
+<arg>${first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T14:48:25.245126" elapsed="0.712904"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-29T14:48:25.958030" level="INFO">Typing text 'gmmqquptuyk' into text field 'id=lastName'.</msg>
+<arg>${lastname_locator}</arg>
+<arg>${last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T14:48:25.958030" elapsed="0.684332"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-29T14:48:26.643361" level="INFO">Typing text 'tkgmmdg@test11w.com' into text field 'id=email'.</msg>
+<arg>${email_locator}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T14:48:26.643361" elapsed="1.147246"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${create_user_button_locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-29T14:48:27.790607" elapsed="0.318163"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-29T14:48:28.108770" level="INFO">Clicking button 'xpath=//*[@id="root"]/div[1]/div[5]/main/div[2]/div/form/section/div[2]/div/div/div/div[2]/button'.</msg>
+<arg>${create_user_button_locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T14:48:28.108770" elapsed="0.166697"/>
+</kw>
+<arg>Nxt12346</arg>
+<arg>taadqqmmgyr</arg>
+<arg>gmmqquptuyk</arg>
+<arg>tkgmmdg@test11w.com</arg>
+<status status="PASS" start="2024-08-29T14:48:24.061735" elapsed="4.213732"/>
+</kw>
+<kw name="Go To Trip Info" owner="BrowserLibrary">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${trip_info_tab}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-29T14:48:28.275467" elapsed="2.081317"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-08-29T14:48:45.620012" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-55.png"&gt;&lt;img src="selenium-screenshot-55.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-08-29T14:48:45.620012" level="FAIL">Element 'xpath=/html/body/div/div[1]/div[5]/main/div[2]/div/form/div[2]/ul/li[2]' not visible after 15 seconds.</msg>
+<arg>${trip_info_tab}</arg>
+<arg>15</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-08-29T14:48:30.356784" elapsed="15.263228">Element 'xpath=/html/body/div/div[1]/div[5]/main/div[2]/div/form/div[2]/ul/li[2]' not visible after 15 seconds.</status>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${trip_info_tab}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" start="2024-08-29T14:48:45.620012" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${trip_info_tab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-29T14:48:45.620012" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:28.275467" elapsed="17.344545">Element 'xpath=/html/body/div/div[1]/div[5]/main/div[2]/div/form/div[2]/ul/li[2]' not visible after 15 seconds.</status>
+</kw>
+<kw name="Add Trip" owner="BrowserLibrary">
+<status status="NOT RUN" start="2024-08-29T14:48:45.620012" elapsed="0.000000"/>
+</kw>
+<kw name="Set Flight Status" owner="BrowserLibrary">
+<arg>Approved</arg>
+<status status="NOT RUN" start="2024-08-29T14:48:45.620012" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="BrowserLibrary" type="TEARDOWN">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<kw name="Close Browser" owner="BrowserLibrary">
+<msg time="2024-08-29T14:48:45.651256" level="FAIL">Maximum limit of started keywords and control structures exceeded.</msg>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.651256" elapsed="0.000000">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.015620">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.635636" elapsed="0.031245">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:45.620012" elapsed="0.046869">Maximum limit of started keywords and control structures exceeded.</status>
+</kw>
+<status status="FAIL" start="2024-08-29T14:48:13.764528" elapsed="31.902353">Element 'xpath=/html/body/div/div[1]/div[5]/main/div[2]/div/form/div[2]/ul/li[2]' not visible after 15 seconds.
+
+Also teardown failed:
+Maximum limit of started keywords and control structures exceeded.</status>
+</test>
+<status status="FAIL" start="2024-08-29T14:48:13.467653" elapsed="32.214853"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="FullTest">FullTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,16 @@
+1724917757829	geckodriver	INFO	Listening on 127.0.0.1:50102
+1724917760893	mozrunner::runner	INFO	Running command: "C:\\Users\\Administrator\\.cache\\selenium\\firefox\\win64\\129.0.2\\firefox.exe" "--marionette" "--remote- ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofileJN5yGo"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1724917761238	Marionette	INFO	Marionette enabled
+1724917761365	Marionette	INFO	Listening on port 50110
+WebDriver BiDi listening on ws://127.0.0.1:50103
+Read port: 50110
+1724917761573	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50103/devtools/browser/2ed833d6-80aa-4309-8de2-08bbc24f7c34
+1724917763734	Marionette	INFO	Stopped listening on port 50110
+Dynamically enable window occlusion 1
+!!! error running onStopped callback: TypeError: callback is not a function
+console.error: (new Error("IndexedDB: main/query-stripping list() IndexedDB:  execute() The application is shutting down", "resource://services-settings/IDBHelpers.sys.mjs", 16))
+console.error: (new Error("IndexedDB: main/fingerprinting-protection-overrides list() IndexedDB:  execute() The application is shutting down", "resource://services-settings/IDBHelpers.sys.mjs", 16))
