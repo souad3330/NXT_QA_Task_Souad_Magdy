@@ -1,7 +1,7 @@
 *** Settings ***
-##Resource    resources/BrowserLibrary.robot
+##Resource    resources/KeywordsLibrary.robot
 
-Resource  C:/Users/Administrator/PycharmProjects/NXT_QA_Task/resources/BrowserLibrary.robot
+Resource  C:/Users/Administrator/PycharmProjects/NXT_QA_Task/resources/KeywordsLibrary.robot
 
 
 Library  SeleniumLibrary
